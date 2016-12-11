@@ -1,0 +1,141 @@
+/* line 12, ../sass/application.scss */
+body {
+  margin-left: 12px;
+  margin-left: 0.75rem;
+  margin-right: 12px;
+  margin-right: 0.75rem;
+}
+/* line 19, ../sass/application.scss */
+body h1 {
+  margin-top: 12px;
+  margin-top: 0.75rem;
+  margin-bottom: 12px;
+  margin-bottom: 0.75rem;
+  font-size: 18px;
+  font-size: 1.125rem;
+  width: 100%;
+  color: black;
+  text-align: center;
+  font-family: "Arial Hebrew Scholar";
+  font-weight: normal;
+}
+/* line 32, ../sass/application.scss */
+body ul {
+  list-style-type: none;
+  padding: 0;
+  width: 100%;
+}
+/* line 40, ../sass/application.scss */
+body ul li {
+  height: 100px;
+  height: 6.25rem;
+  display: table;
+  width: 96%;
+  float: left;
+  margin: auto;
+  -webkit-box-shadow: 0px 0px 42px 4px rgba(0, 0, 0, 0.15);
+  -moz-box-shadow: 0px 0px 42px 4px rgba(0, 0, 0, 0.15);
+  box-shadow: 0px 0px 42px 4px rgba(0, 0, 0, 0.15);
+}
+@media only screen and (min-width: 320px) {
+  /* line 40, ../sass/application.scss */
+  body ul li {
+    margin-left: 12px;
+    margin-left: 0.75rem;
+    margin-right: 12px;
+    margin-right: 0.75rem;
+    margin-top: 12px;
+    margin-top: 0.75rem;
+    margin-bottom: 12px;
+    margin-bottom: 0.75rem;
+  }
+}
+@media only screen and (min-width: 980px) {
+  /* line 40, ../sass/application.scss */
+  body ul li {
+    margin-left: 12px;
+    margin-left: 0.75rem;
+    margin-right: 12px;
+    margin-right: 0.75rem;
+    margin-top: 12px;
+    margin-top: 0.75rem;
+    margin-bottom: 12px;
+    margin-bottom: 0.75rem;
+    width: 46.14%;
+  }
+}
+/* line 69, ../sass/application.scss */
+body ul li div {
+  display: table-cell;
+  vertical-align: middle;
+}
+/* line 73, ../sass/application.scss */
+body ul li div.image-container {
+  height: 62px;
+  height: 3.875rem;
+  width: 84px;
+  width: 5.25rem;
+  margin-left: 12px;
+  margin-left: 0.75rem;
+}
+/* line 81, ../sass/application.scss */
+body ul li div.address-container {
+  width: 200px;
+  width: 12.5rem;
+}
+/* line 83, ../sass/application.scss */
+body ul li div.address-container .location {
+  color: #b5b5b5;
+}
+/* line 88, ../sass/application.scss */
+body ul li div.button-container {
+  width: 26.19%;
+  height: 38.83%;
+}
+/* line 94, ../sass/application.scss */
+body ul li div img {
+  height: 100px;
+  height: 6.25rem;
+  margin-left: 12px;
+  margin-left: 0.75rem;
+  margin-right: 12px;
+  margin-right: 0.75rem;
+  width: inherit;
+  height: inherit;
+}
+/* line 103, ../sass/application.scss */
+body ul li div button {
+  border-width: 1px;
+  border-width: 0.0625rem;
+  width: 90px;
+  width: 5.625rem;
+  height: 40px;
+  height: 2.5rem;
+  font-size: 8px;
+  font-size: 0.5rem;
+  margin-right: 8px;
+  margin-right: 0.5rem;
+  padding-left: 16%;
+  text-transform: uppercase;
+  font-weight: bold;
+  background-color: transparent;
+  background-image: url("../assets/bluecart.png");
+  background-repeat: no-repeat;
+  background-position: 25% 46.4%;
+  background-size: 16px 11px;
+  color: #0080c6;
+  border-color: lightgrey;
+  border-style: solid;
+  box-shadow: none;
+  cursor: pointer;
+}
+/* line 122, ../sass/application.scss */
+body ul li div button:focus {
+  outline: none;
+}
+/* line 125, ../sass/application.scss */
+body ul li div button:hover {
+  background-image: url("../assets/cart.png");
+  background-color: #0080c6;
+  color: white;
+}
