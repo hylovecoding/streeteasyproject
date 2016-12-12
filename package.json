@@ -1,0 +1,17 @@
+{
+  "name": "streeteasy",
+  "version": "1.0.0",
+  "description": "Hello! Thanks for your interest in applying for the frontend developer position at StreetEasy. This is the work sample that we use to evaluate your development skills. We've kept it as close as possible to how we normally work and hope it gives you a feel for the tools and workflow we regularly use.",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.1.1",
+    "gulp-sass": "^3.0.0",
+    "gulp-scss-lint": "^0.4.0"
+  }
+}

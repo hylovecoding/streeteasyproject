@@ -1,13 +1,13 @@
 <html>
   <head>
     <title>StreetEasy</title>
-    <link rel="stylesheet" href="/stylesheets/application.css">
+    <link rel="stylesheet" href="./stylesheets/application.css">
   </head>
   <body>
-    <h1><%= @title %></h1>
-    <ul>
+    <h1 ><%= @title %></h1>
+    <ul class="items-container">
       <% for @listing in @listings %>
-        <li>
+        <li class="item-container">
             <div class="image-container">
                 <img src="<%=@listing[:imageSrc] %>"/>
             </div>
@@ -15,7 +15,7 @@
                 <p><%=@listing[:address] %><br><span class="location"><%=@listing[:location] %></span></p>
             </div>
             <div class="button-container">
-                 <button>
+                 <button class="add-button">
                     add
                 </button>
             </div>
@@ -23,6 +23,7 @@
         </li>
        <% end %>
     </ul>
+    <div class="cart-button"><span class="total-items"></span></div>
   </body>
   <script src="./js/jquery-3.1.1.min.js"></script>
   <script src="./js/app.js"></script>

@@ -1,140 +1,204 @@
 @mixin rem($property, $pxval, $base: 16) {
-    #{$property}: #{$pxval}px;
-    #{$property}: #{$pxval / $base}rem;
+  #{$property}: #{$pxval}px;
+  #{$property}: #{$pxval / $base}rem;
 }
 
-
-$bp-small:                      "only screen and (min-width: 320px)";        // "320px"
-$bp-large-plus:                 "only screen and (min-width: 980px)";        // "980px"
-
-
+$bp-small:                      'only screen and (min-width: 320px)';
+$bp-large-plus:                 'only screen and (min-width: 980px)';
+$black:                           #000;
+$blue:                           #0080c6;
+$grey:                           #4bddc2;
+$lightgrey:                      #d3d3d3;
+$white:                          #fff;
+$location-color:                 #b5b5b5;
+$shadow-color:              rgba(0, 0, 0, .15);
+$ink-color:                      rgba(255, 255, 255, .3);
 
 body {
+  @include rem(margin-left, 12);
+  @include rem(margin-right, 12);
+}
+
+h1 {
+  @include rem(margin-top, 12);
+  @include rem(margin-bottom, 12);
+  @include rem(font-size, 60);
+
+  color: $black;
+  font-family: 'Arial Hebrew Scholar';
+  font-weight: normal;
+  text-align: center;
+  transform: scale(.5);
+  width: 100%;
+}
+
+.items-container {
+  list-style-type: none;
+  padding: 0;
+  width: 100%;
+
+  }
+
+.item-container {
+  @include rem(height, 100);
+
+  box-shadow: 0 0 42px 4px $shadow-color;
+  display: table;
+  float: left;
+  margin: auto;
+  width: 96%;
+
+  @media #{$bp-small} {
     @include rem(margin-left, 12);
     @include rem(margin-right, 12);
-
-  //@include rem(width, 980);
-
-
-  h1 {
-
-     @include rem(margin-top, 12);
-     @include rem(margin-bottom, 12);
-     @include rem(font-size, 18);
-    width: 100%;
-    color: black;
-    text-align: center;
-    font-family: "Arial Hebrew Scholar";
-    font-weight: normal;
+    @include rem(margin-top, 12);
+    @include rem(margin-bottom, 12);
 
   }
 
-  ul {
-    list-style-type: none;
-    padding:0;
-     width: 100%;
+  @media #{$bp-large-plus} {
+    @include rem(margin-left, 12);
+    @include rem(margin-right, 12);
+    @include rem(margin-top, 12);
+    @include rem(margin-bottom, 12);
+    width: 47.14%;
+  }
 
+  div {
+    display: table-cell;
+    vertical-align: middle;
+  }
 
+  .image-container {
+    @include rem(height, 62);
+    @include rem(width, 84);
+    @include rem(margin-left, 12);
+  }
 
+  img {
+    @include rem(height, 100);
+    @include rem(margin-left, 12);
+    @include rem(margin-right, 12);
+    height: inherit;
+    width: inherit;
+  }
 
-    li{
-        @include rem(height, 100);
+  .address-container {
+    @include rem(width, 200);
+  }
 
-        display:table;
-       width: 96%;
-        float: left;
-          margin: auto;
-         -webkit-box-shadow: 0px 0px 42px 4px rgba(0,0,0,0.15);
-         -moz-box-shadow: 0px 0px 42px 4px rgba(0,0,0,0.15);
-        box-shadow: 0px 0px 42px 4px rgba(0,0,0,0.15);
+  .location {
+    color: $location-color;
+  }
 
-        @media #{$bp-small} {
-            @include rem(margin-left, 12);
-            @include rem(margin-right, 12);
-            @include rem(margin-top, 12);
-            @include rem(margin-bottom, 12);
+  .button-container {
+    height: 38.83%;
+    width: 26.19%;
+  }
 
-        }
+  .add-button {
+    @include rem(border-width, 1);
+    @include rem(width, 90);
+    @include rem(height, 40);
+    @include rem(font-size, 8);
+    @include rem(margin-right, 8);
+    background-color: transparent;
+    background-image: url('../assets/bluecart.png');
+    background-position: 25% 46.4%;
+    background-repeat: no-repeat;
+    background-size: 16px 11px;
+    border-color: $lightgrey;
+    border-style: solid;
+    box-shadow: none;
+    color: $blue;
+    cursor: pointer;
+    font-weight: bold;
+    overflow: hidden;
+    padding-left: 16%;
+    position: relative;
+    text-transform: uppercase;
+    transition: all .2s ease;
 
-        @media #{$bp-large-plus} {
-            @include rem(margin-left, 12);
-            @include rem(margin-right, 12);
-            @include rem(margin-top, 12);
-            @include rem(margin-bottom, 12);
-            width: 46.14%;
-        }
-
-
-
-        div{
-            display:table-cell;
-            vertical-align: middle;
-
-              &.image-container{
-                @include rem(height, 62);
-                @include rem(width, 84);
-                 @include rem(margin-left, 12);
-
-
-
-              }
-              &.address-container{
-                  @include rem(width, 200);
-                  .location {
-                    color: #b5b5b5;
-                  }
-              }
-
-              &.button-container{
-                width: 26.19% ;
-                height:38.83%;
-              }
-
-
-             img{
-                   @include rem(height, 100);
-                   @include rem(margin-left, 12);
-                   @include rem(margin-right, 12);
-                    width:inherit;
-                    height:inherit;
-
-                }
-
-              button{
-                @include rem(border-width, 1);
-                @include rem(width, 90);
-                @include rem(height, 40);
-                @include rem(font-size, 8);
-                @include rem(margin-right, 8);
-                padding-left:16%;
-                text-transform: uppercase;
-                font-weight: bold;
-                background-color:transparent;
-                background-image:  url('../assets/bluecart.png') ;
-                background-repeat: no-repeat;
-                background-position: 25% 46.4%;
-                background-size: 16px 11px;
-                color:#0080c6;
-                border-color: lightgrey;
-                border-style: solid;
-                box-shadow: none;
-                cursor: pointer;
-                &:focus {
-                  outline: none;
-                }
-                &:hover{
-                  background-image:  url('../assets/cart.png') ;
-                  background-color:#0080c6;
-                  color:white;
-                }
-
-
-              }
-        }
-
-
-
+    &:focus {
+      outline: none;
     }
 
+    &:hover {
+      background-color: $blue;
+      background-image: url('../assets/cart.png');
+      box-shadow: 0 0 42px 4px $shadow-color;
+      color: $white;
+      z-index: 1000;
+    }
+
+    .ink {
+      background: $ink-color;
+      border-radius: 100%;
+      display: block;
+      position: absolute;
+      transform: scale(0);
+    }
+
+    .animate-ink {
+      animation: ripple .65s linear;
+    }
+
+    @keyframes ripple {
+      100% {opacity: 0; transform: scale(1.5);}
+    }
   }
+}
+
+.cart-button {
+  @include rem(bottom, 20);
+  @include rem(right, 23);
+  @include rem(width, 84);
+  @include rem(height, 84);
+
+  background-color: $blue;
+  background-image: url('../assets/cart@2x.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 100%;
+  box-shadow: 0 0 12px 3px $shadow-color;
+  color: $white;
+  position: fixed;
+  transform: scale(0);
+  transition: all .2s ease;
+  z-index: 1000;
+}
+
+.total-items {
+  @include rem(bottom, 60);
+  @include rem(right, 0);
+  @include rem(width, 24);
+  @include rem(height, 24);
+  @include rem(line-height, 24);
+  background-color: $grey;
+  border-radius: 100%;
+  position: absolute;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.animate-cart-button {
+  animation: zoom-out .65s linear;
+  animation-fill-mode: forwards;
+}
+
+.animate-total-items {
+  animation: zoom-out-total-items .65s linear;
+}
+
+@keyframes zoom-out {
+  100% {opacity: 100; transform: scale(1);}
+}
+
+@keyframes zoom-out-total-items {
+  0% { transform: scale(1);}
+  25% { transform: scale(1.5);}
+  50% { transform: scale(2);}
+  75% { transform: scale(1.5);}
+  100% { transform: scale(1);}
+
 }
